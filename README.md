@@ -83,3 +83,40 @@ In the first phase of the project, I performed data preprocessing and explorator
 *   **Risk Assessment:**
     *   Calculated the Value at Risk (VaR) to quantify the potential for loss in the value of TSLA stock.
     *   Calculated the Sharpe Ratio to assess the risk-adjusted return of TSLA.
+
+## Task 2: Develop Time Series Forecasting Models
+
+In this task, I developed and compared two different time series forecasting models to predict Tesla's future stock prices:
+
+*   **ARIMA Model:** A classical statistical model (AutoRegressive Integrated Moving Average). I used `auto_arima` to find the optimal model parameters (p, d, q).
+*   **LSTM Model:** A deep learning model (Long Short-Term Memory), which is well-suited for sequence prediction problems.
+
+The models were trained on historical data up to the end of 2023 and tested on data from 2024 onwards. The performance of the models was evaluated using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and Mean Absolute Percentage Error (MAPE).
+
+## Task 3: Forecast Future Market Trends
+
+Using the trained ARIMA model, I generated a 12-month forecast of Tesla's stock price. This task involved:
+
+*   **Generating the Forecast:** Forecasting future prices with confidence intervals to represent the range of uncertainty.
+*   **Visualizing the Forecast:** Plotting the forecasted prices alongside the historical data.
+*   **Analyzing the Results:** Interpreting the forecast to identify long-term trends, assess volatility and risk, and identify potential market opportunities.
+
+## Task 4: Optimize Portfolio Based on Forecast
+
+This task focused on constructing an optimal portfolio using the principles of Modern Portfolio Theory (MPT). The key steps were:
+
+*   **Calculating Expected Returns:** Using the ARIMA forecast for TSLA's expected return and historical averages for BND and SPY.
+*   **Computing the Covariance Matrix:** Based on the historical daily returns of all three assets.
+*   **Generating the Efficient Frontier:** Running a Monte Carlo simulation to find the set of optimal portfolios.
+*   **Identifying Key Portfolios:** Identifying and plotting the Maximum Sharpe Ratio Portfolio and the Minimum Volatility Portfolio.
+*   **Recommending an Optimal Portfolio:** Providing a recommendation based on the analysis of the Efficient Frontier.
+
+## Task 5: Strategy Backtesting
+
+In the final task, I backtested the performance of the optimized portfolio strategy against a benchmark. This involved:
+
+*   **Defining a Backtesting Period:** Using the last year of the dataset.
+*   **Defining a Benchmark:** A simple 60% SPY / 40% BND portfolio.
+*   **Simulating the Strategy:** Simulating the performance of the optimized portfolio over the backtesting period.
+*   **Analyzing Performance:** Plotting the cumulative returns of the strategy and the benchmark, and calculating their total returns and Sharpe ratios.
+*   **Drawing Conclusions:** Summarizing the backtest results to assess the viability of the model-driven investment strategy.
